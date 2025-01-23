@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+
+    <link rel="stylesheet"  href="style.css"/>
+    <link rel="stylesheet"  href="mediaqueries.css"/>
+     <!-- EmailJS CDN -->
+     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="logo"> Suneth Neranja</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="#about"> About</a></li>
+                <li><a href="#experience"> Experience</a></li>
+                <li><a href="#projects"> Projects</a></li>
+                <li><a href="#contact"> Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <nav id="hamburger-nav">
+        <div class="logo"> Suneth Neranja</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#about" onclick="toggleMenu()"> About</a></li>
+                <li><a href="#experience" onclick="toggleMenu()"> Experience</a></li>
+                <li><a href="#projects" onclick="toggleMenu()"> Projects</a></li>
+                <li><a href="#contact" onclick="toggleMenu()"> Contact</a></li>
+            </div>
+        </div>
+    </nav>
+    <section id="profile">
+        <div class="section__pic-container">
+            <img src="./assets/profile pic.png" alt="Suneth Neranja profile picture" />
+        </div>
+        <div class="section__text">
+            <p class="section__text__p1">Hello, I'm</p>
+            <h1 class="title">Suneth Neranja Maddumage Don</h1>
+            <p class="section__text__p2">Software Developer</p>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2"
+                onclick="window.open('./assets/Resume_MaddumageDonSunethNeranja.pdf')"
+              >
+                Download CV
+              </button>
+              <button class="btn btn-color-1" onclick="location.href='./#contact'">
+                Contact Info
+              </button>
+            </div>
+            <div id="socials-container">
+              <img
+                src="./assets/linkedin.png"
+                alt="My LinkedIn profile"
+                class="icon"
+                onclick="location.href='https://www.linkedin.com/in/suneth-neranja-maddumage-don/'"
+              />
+              <img
+                src="./assets/github.png"
+                alt="My Github profile"
+                class="icon"
+                onclick="location.href='https://github.com/Don-Suneth?tab=repositories0'"
+              />
+            </div>
+        </div>
+    </section>
+    <section id="about">
+        <p class="section__text__p1">Get To Know More</p>
+        <h1 class="title">About Me</h1>
+        <div class="section-container">
+          <div class="section__pic-container">
+            <img
+              src="./assets/about-pic.png"
+              alt="Profile picture"
+              class="about-pic"
+            />
+          </div>
+          <div class="about-details-container">
+            <div class="about-containers">
+              <div class="details-container">
+                <img
+                  src="./assets/experience.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <h3>Experience</h3>
+                <p>2+ years <br />Full Stack Development</p>
+              </div>
+              <div class="details-container">
+                <img
+                  src="./assets/education.png"
+                  alt="Education icon"
+                  class="icon"
+                />
+                <h3>Education</h3>
+                <p>Bachelors Of Information Technology (Software Development)<br />UniSA</p>
+              </div>
+            </div>
+            <div class="text-container">
+              <p>
+                I am a recent Bachelor of Information Technology (Software Development) graduate from the University of South Australia, with experience in full-stack web development, cloud computing, and Agile methodologies. 
+                Skilled in, like React, SQL, and JavaScript.
+              </p>
+              <p>
+                A creative and innovative developer with strong problem-solving skills and a proven ability to work both collaboratively and independently. 
+                Recognised for delivering high-quality outcomes that consistently meet and exceed project requirements.
+              </p>
+              <p>
+ With a strong dedication to enhancing the digital presence through application development and research, 
+                I am eager to contribute to growth as a software developer for your company. I look forward to leveraging my technical and creative skills on platforms.
+              </p>
+            </div>
+          </div>
+        </div>
+        <img
+          src="./assets/arrow.png"
+          alt="Arrow icon"
+          class="icon arrow"
+          onclick="location.href='./#experience'"
+        />
+    </section>
+<!-- Experience Section -->
+<section id="experience">
+    <p class="section__text__p1">Explore My</p>
+    <h1 class="title">Experience</h1>
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <!-- Frontend Development Container -->
+        <div class="details-container">
+          <h2 class="experience-sub-title">Frontend Development</h2>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <h3>HTML</h3>
+            </div>
+            <div class="skill-item">
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <h3>CSS</h3>
+            </div>
+            <div class="skill-item">
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <h3>JavaScript</h3>
+            </div>
+            <div class="skill-item">
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <h3>ReactJS</h3>
+            </div>
+            <div class="skill-item">
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <h3>Power BI</h3>
+            </div>
+          </div>
+        </div>
+  
+        <!-- Backend Development Container -->
+        <div class="details-container">
+          <h2 class="experience-sub-title">Backend Development</h2>
+          <div class="skills-grid">
+            <div class="skill-item">
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <h3>ASP.NET</h3>
+            </div>
+            <div class="skill-item">
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <h3>Node JS</h3>
+            </div>
+            <div class="skill-item">
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <h3>Python</h3>
+            </div>
+            <div class="skill-item">
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <h3>Git/GitHub</h3>
+            </div>
+            <div class="skill-item">
+              <img src="./assets/checkmark.png" alt="Experience icon" class="icon" />
+              <h3>SQL</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <img src="./assets/arrow.png" alt="Arrow icon" class="icon arrow" onclick="location.href='./#projects'" />
+  </section>
+      <section id="projects">
+        <p class="section__text__p1">Browse My Recent</p>
+        <h1 class="title">Projects</h1>
+        <div class="experience-details-container">
+          <div class="about-containers">
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img
+                  src="./assets/cbm_logo.png"
+                  alt="Project 1"
+                  class="project-img"
+                />
+              </div>
+              <h2 class="experience-sub-title project-title">Home Crotchet</h2>
+              <p >
+                Home Crotchet is a successful MVP that I created for an E-commerce website.I wanted to get a website up and running as fast as i can so my cutsomers can start their shopping experiance 
+              </p>
+              <div class="btn-container">
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='https://github.com/Don-Suneth/Crafts-By-Malika'"
+                >
+                  Github
+                </button>
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='https://don-suneth.github.io/Crafts-By-Malika/'"
+                >
+                  Live Demo
+                </button>
+                <!-- <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href=''"
+                >
+                  Case Study
+                </button>                 -->
+              </div>
+            </div>
+            <div class="details-container color-container">
+              <div class="article-container">
+                <img
+                  src="./assets/mushroom-calc-logo.png"
+                  alt="Project 2"
+                  class="project-img"
+                />
+              </div>
+              <h2 class="experience-sub-title project-title">Mushroom Stock Calculator</h2>
+              <p >
+                A comprehensive Web application for managing and calculating mushroom packaging orders across multiple Australian supermarket chains. This React Native application streamlines the order processing workflow and inventory management for a mushroom packaging facility.
+              </p>
+              <div class="btn-container">
+                <!-- <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='https://github.com/'"
+                >
+                  Github
+                </button>
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='https://github.com/'"
+                >
+                  Live Demo
+                </button> -->
+                <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href=''"
+                >
+                    Coming Soon
+                </button>
+                <!-- <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href=''"
+                >
+                  Case Study
+                </button>   -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          src="./assets/arrow.png"
+          alt="Arrow icon"
+          class="icon arrow"
+          onclick="location.href='./#contact'"
+        />
+      </section>
+      <section id="contact">
+        
+        <p class="section__text__p1">Get in Touch</p>
+        <h1 class="title">Contact Me</h1>
+        <div class="contact-info-upper-container">
+
+          <form id="contact-form" class="contact-form">
+            <div class="form-grid">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" placeholder=" " required>
+                    <label for="name">Name</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="email" id="email" name="email" placeholder=" " required>
+                    <label for="email">Email</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input type="text" id="subject" name="subject" placeholder=" " required>
+                <label for="subject">Subject</label>
+            </div>
+
+            <div class="form-group">
+                <textarea id="message" name="message" rows="5" placeholder=" " required></textarea>
+                <label for="message">Message</label>
+            </div>
+
+            <div class="submit-container">
+                <button type="submit" class="submit-btn">
+                    <span class="btn-text">Send Message</span>
+                    <svg class="btn-icon" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none">
+                        <path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/>
+                    </svg>
+                </button>
+            </div>
+        </form>
+      </section>
+      <div class="contact-info-container">
+        <img
+          src="./assets/email.png"
+          alt="Email icon"
+          class="icon contact-icon email-icon"
+        />
+        <p>donsunethneranja@outlook.com</p>
+      </div>
+      <div class="contact-info-container">
+        <img
+          src="./assets/linkedin.png"
+          alt="LinkedIn icon"
+          class="icon contact-icon"
+        />
+        <p><a href="https://www.linkedin.com/in/suneth-neranja-maddumage-don/">LinkedIn</a></p>
+      </div>
+  </div>
+      <footer>
+        <nav>
+          <div class="nav-links-container">
+            <ul class="nav-links">
+              <li><a href="#about">About</a></li>
+              <li><a href="#experience">Experience</a></li>
+              <li><a href="#projects">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+        <p>Copyright &#169; 2023 Suneth Neranja. All Rights Reserved.</p>
+      </footer>
+    <script src="script.js"></script>
+    
+</body>
+</html>
